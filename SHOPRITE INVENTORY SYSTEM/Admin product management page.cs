@@ -15,7 +15,7 @@ namespace SHOPRITE_INVENTORY_SYSTEM
 {
     public partial class Admin_Page : Form
     {
-        Admin_login al = new Admin_login();
+      
 
         Inventory con = new Inventory();
         MySqlCommand command;
@@ -45,8 +45,7 @@ namespace SHOPRITE_INVENTORY_SYSTEM
 
         private void button1_Click(object sender, EventArgs e)   
         {
-            al.Show();
-            this.Close();
+           
 
             try
             {
@@ -54,7 +53,7 @@ namespace SHOPRITE_INVENTORY_SYSTEM
                 string cn = "datasource=127.0.0.1;port=3306;username=root;password= LIVERPOOL;";
 
                 //This is my insert query in which I am taking input from the user through windows forms
-                string Query = "insert into shoprite_inventory.admin_page(PRODUCT, PRODUCT_ID, PRODUCT_CATEGORY_ID, DATE_SOLD ,SALES_NUMBER, PRODUCT_CATEGORY) values('" + this.PRODUCT.Text + "','" + this.PRODUCTID.Text + "','" + this.PRODUCTCATEGORYID.Text + "','" + this.SALESNUMBER.Text + "','" + this.DATESOLD.Text + "','" + this.prod_cat_text +"'); ";
+                string Query = "insert into shoprite_inventory.admin_page(PRODUCT, PRODUCT_ID, PRODUCT_CATEGORY_ID,SALES_NUMBER,DATE_SOLD) values('" + this.PRODUCT.Text + "','" + this.PRODUCTID.Text + "','" + this.PRODUCTCATEGORYID.Text + "','" + this.SALESNUMBER.Text + "','" + this.DATESOLD.Text +"'); ";
 
                 //This is  MySqlConnection here i have created the object and pass my connection string.
                 MySqlConnection MyConn2 = new MySqlConnection(cn);
@@ -130,6 +129,25 @@ namespace SHOPRITE_INVENTORY_SYSTEM
         private void SALESNUMBER_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                con.cn.Open();
+                command = new MySqlCommand("delete * from admin_page", con.cn);
+                da = new MySqlDataAdapter(command);
+                dt = new DataTable();
+                da.Fill(dt);
+                dataGridView1.DataSource = dt;
+                con.cn.Close();
+                MessageBox.Show("Record deleted!");
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
     }
 }

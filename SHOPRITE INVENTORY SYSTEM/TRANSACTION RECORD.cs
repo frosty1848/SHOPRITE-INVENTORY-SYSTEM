@@ -20,6 +20,7 @@ namespace SHOPRITE_INVENTORY_SYSTEM
         public TRANSACTION_RECORD()
         {
             InitializeComponent();
+            con.Connect();
         }
 
         private void TRANSACTION_RECORD_Load(object sender, EventArgs e)

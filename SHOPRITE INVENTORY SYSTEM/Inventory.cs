@@ -12,7 +12,7 @@ namespace SHOPRITE_INVENTORY_SYSTEM
         public MySqlConnection cn;
         public void Connect()
         {
-            cn = new MySqlConnection("Datasource = 127.0.0.1;username = root;password = LIVERPOOL;");
-        }
+            cn = new MySqlConnection("Datasource = 127.0.0.1;username = root;password = LIVERPOOL; database = shoprite_inventory;");
+    ;    }
     }
 }

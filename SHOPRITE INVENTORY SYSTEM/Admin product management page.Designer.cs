@@ -31,16 +31,13 @@
             this.label1 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
             this.PRODUCT = new System.Windows.Forms.TextBox();
             this.PRODUCTID = new System.Windows.Forms.TextBox();
             this.PRODUCTCATEGORYID = new System.Windows.Forms.TextBox();
-            this.prod_cat_text = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.SALESNUMBER = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
@@ -74,7 +71,7 @@
             // button1
             // 
             this.button1.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.button1.Location = new System.Drawing.Point(216, 247);
+            this.button1.Location = new System.Drawing.Point(298, 247);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 36);
             this.button1.TabIndex = 2;
@@ -82,25 +79,16 @@
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // button2
-            // 
-            this.button2.BackColor = System.Drawing.Color.Lime;
-            this.button2.Location = new System.Drawing.Point(393, 247);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 36);
-            this.button2.TabIndex = 3;
-            this.button2.Text = "UPDATE";
-            this.button2.UseVisualStyleBackColor = false;
-            // 
             // button3
             // 
             this.button3.BackColor = System.Drawing.Color.Red;
-            this.button3.Location = new System.Drawing.Point(571, 247);
+            this.button3.Location = new System.Drawing.Point(502, 247);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(75, 36);
             this.button3.TabIndex = 4;
             this.button3.Text = "DELETE";
             this.button3.UseVisualStyleBackColor = false;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // label2
             // 
@@ -129,15 +117,6 @@
             this.label4.TabIndex = 7;
             this.label4.Text = "PRODUCT CATEGORY ID:";
             // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(499, 186);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(125, 13);
-            this.label5.TabIndex = 8;
-            this.label5.Text = "PRODUCT CATEGORY:";
-            // 
             // PRODUCT
             // 
             this.PRODUCT.Location = new System.Drawing.Point(188, 91);
@@ -162,21 +141,14 @@
             this.PRODUCTCATEGORYID.TabIndex = 11;
             this.PRODUCTCATEGORYID.TextChanged += new System.EventHandler(this.PRODUCTCATEGORYID_TextChanged);
             // 
-            // prod_cat_text
-            // 
-            this.prod_cat_text.Location = new System.Drawing.Point(627, 179);
-            this.prod_cat_text.Name = "prod_cat_text";
-            this.prod_cat_text.Size = new System.Drawing.Size(204, 20);
-            this.prod_cat_text.TabIndex = 12;
-            // 
             // label6
             // 
             this.label6.AutoSize = true;
             this.label6.Location = new System.Drawing.Point(498, 94);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(94, 13);
+            this.label6.Size = new System.Drawing.Size(76, 13);
             this.label6.TabIndex = 13;
-            this.label6.Text = "SALES NUMBER:";
+            this.label6.Text = "SALES COST:";
             // 
             // SALESNUMBER
             // 
@@ -250,16 +222,13 @@
             this.Controls.Add(this.label7);
             this.Controls.Add(this.SALESNUMBER);
             this.Controls.Add(this.label6);
-            this.Controls.Add(this.prod_cat_text);
             this.Controls.Add(this.PRODUCTCATEGORYID);
             this.Controls.Add(this.PRODUCTID);
             this.Controls.Add(this.PRODUCT);
-            this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.label1);
@@ -277,16 +246,13 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox PRODUCT;
         private System.Windows.Forms.TextBox PRODUCTID;
         private System.Windows.Forms.TextBox PRODUCTCATEGORYID;
-        private System.Windows.Forms.TextBox prod_cat_text;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox SALESNUMBER;
         private System.Windows.Forms.Label label7;

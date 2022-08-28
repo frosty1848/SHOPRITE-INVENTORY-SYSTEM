@@ -27,7 +27,7 @@ namespace SHOPRITE_INVENTORY_SYSTEM
                 string cn = "datasource=127.0.0.1;port=3306;username=root;password= LIVERPOOL;";
 
                 //This is my insert query in which I am taking input from the user through windows forms
-                string Query = "insert into shoprite_inventory.transaction(STOCKS_IN_DEMAND, OUT_OF_STOCK_PROD, STOCK_IN_EXCESS) values('" + this.textBox2.Text + "','" + this.textBox3.Text + "','" + this.textBox4.Text + "'); ";
+                string Query = "insert into shoprite_inventory.sales_report(STOCKS_IN_DEMAND, OUT_OF_STOCK_PROD, STOCK_IN_EXCESS) values('" + this.textBox2.Text + "','" + this.textBox3.Text + "','" + this.textBox4.Text + "'); ";
 
                 //This is  MySqlConnection here i have created the object and pass my connection string.
                 MySqlConnection MyConn2 = new MySqlConnection(cn);
