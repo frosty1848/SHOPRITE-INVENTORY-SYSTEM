@@ -13,6 +13,7 @@ namespace SHOPRITE_INVENTORY_SYSTEM
 {
     public partial class USER_LOGIN : Form
     {
+        static string user;
         static int attempt = 3;
         public USER_LOGIN()
         {
@@ -21,12 +22,11 @@ namespace SHOPRITE_INVENTORY_SYSTEM
         
         private void button1_Click(object sender, EventArgs e)
         {
-           password_box.Text = Hash_password.Hash_SHA1(password_box.Text);
-            password_box.Text = "YNWA";
+            
+            user = Hash_password.Hash_SHA1(password_box.Text);
 
-            string username = username_box.Text;
-            string password = password_box.Text;
-            if ((username_box.Text == "JEFF HENDRICK") && (password_box.Text == password_box.Text))
+
+            if ((username_box.Text == "JEFF HENDRICK") && (password_box.Text == "YNWA"))
             {
                 attempt = 0;
                 MessageBox.Show("You have been given access");
@@ -35,20 +35,20 @@ namespace SHOPRITE_INVENTORY_SYSTEM
                 up.Show();
                 this.Hide();
 
-
                 try
                 {
                     //This is my connection string I have assigned the database file address path
-                    string cn = "datasource=127.0.0.1;port=3306;username=root;password=;";
+                    string cn = "datasource=127.0.0.1;port=3306;username=root;password=LIVERPOOL;";
 
                     //This is my insert query in which I am taking input from the user through windows forms
-                    string Query = "insert into shoprite_inventory.user_login(USERNAME, PASSWORD) values('" + this.username_box.Text + "','" + this.password_box.Text + "');";
+                    string Query = "insert into shoprite_inventory.user_login(USERNAME, PASSWORD) values('" + this.username_box.Text + "','" + user + "');";
 
                     //This is  MySqlConnection here i have created the object and pass my connection string.
                     MySqlConnection Con3 = new MySqlConnection(cn);
 
                     //This is command class which will handle the query and connection object.
                     MySqlCommand Com3 = new MySqlCommand(Query, Con3);
+                   
 
                     MySqlDataReader MyReader4;
                     Con3.Open();
@@ -66,7 +66,7 @@ namespace SHOPRITE_INVENTORY_SYSTEM
             }
             else if ((attempt == 3) && (attempt > 0))
             {
-                MessageBox.Show("You only have " + Convert.ToString(attempt) + "attempt to try");
+                MessageBox.Show("You only have " + Convert.ToString(attempt) + " attempt to try");
             }
             else
             {
@@ -94,7 +94,7 @@ namespace SHOPRITE_INVENTORY_SYSTEM
         {
             ADMINISTRATOR_PAGE AP = new ADMINISTRATOR_PAGE();
             AP.Show();
-            AP.Hide();
+            this.Hide();
         }
     }
 }

@@ -135,16 +135,20 @@ namespace SHOPRITE_INVENTORY_SYSTEM
         {
             try
             {
-                con.cn.Open();
-                command = new MySqlCommand("delete * from admin_page", con.cn);
-                da = new MySqlDataAdapter(command);
-                dt = new DataTable();
-                da.Fill(dt);
-                dataGridView1.DataSource = dt;
-                con.cn.Close();
-                MessageBox.Show("Record deleted!");
+                string MyConnection = "datasource=127.0.0.1;port=3306;username=root;password=LIVERPOOL;";
+                string Qu = "delete from shoprite_inventory.admin_page where (PRODUCT ='" + this.PRODUCT.Text + "');";
+                MySqlConnection MyConn = new MySqlConnection(MyConnection);
+                MySqlCommand MyCommand = new MySqlCommand(Qu, MyConn);
+                MySqlDataReader MyReader;
+                MyConn.Open();
+                MyReader = MyCommand.ExecuteReader();
+                MessageBox.Show("Data Deleted");
+                while (MyReader.Read())
+                {
+                }
+                MyConn.Close();
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
             }

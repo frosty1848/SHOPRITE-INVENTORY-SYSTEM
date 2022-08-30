@@ -41,6 +41,7 @@
             this.transbtn = new System.Windows.Forms.Button();
             this.resetbtn = new System.Windows.Forms.Button();
             this.linkLabel1 = new System.Windows.Forms.LinkLabel();
+            this.Ld_btn = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -57,9 +58,9 @@
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(313, 102);
+            this.dataGridView1.Location = new System.Drawing.Point(407, 102);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(444, 215);
+            this.dataGridView1.Size = new System.Drawing.Size(350, 215);
             this.dataGridView1.TabIndex = 1;
             // 
             // label2
@@ -167,11 +168,23 @@
             this.linkLabel1.Text = "GO TO ATTENDANT PAGE";
             this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
             // 
+            // Ld_btn
+            // 
+            this.Ld_btn.BackColor = System.Drawing.Color.Lime;
+            this.Ld_btn.Location = new System.Drawing.Point(330, 102);
+            this.Ld_btn.Name = "Ld_btn";
+            this.Ld_btn.Size = new System.Drawing.Size(75, 29);
+            this.Ld_btn.TabIndex = 13;
+            this.Ld_btn.Text = "SUBMIT";
+            this.Ld_btn.UseVisualStyleBackColor = false;
+            this.Ld_btn.Click += new System.EventHandler(this.Ld_btn_Click);
+            // 
             // TRANSACTION_RECORD
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 439);
+            this.Controls.Add(this.Ld_btn);
             this.Controls.Add(this.linkLabel1);
             this.Controls.Add(this.resetbtn);
             this.Controls.Add(this.transbtn);
@@ -209,5 +222,6 @@
         private System.Windows.Forms.Button transbtn;
         private System.Windows.Forms.Button resetbtn;
         private System.Windows.Forms.LinkLabel linkLabel1;
+        private System.Windows.Forms.Button Ld_btn;
     }
 }

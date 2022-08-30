@@ -15,6 +15,7 @@ namespace SHOPRITE_INVENTORY_SYSTEM
 {
     public partial class Attendant_login : Form
     {
+        static string var;
         static int attempt = 3;
         public Attendant_login()
         {
@@ -23,13 +24,14 @@ namespace SHOPRITE_INVENTORY_SYSTEM
 
         private void button2_Click(object sender, EventArgs e)
         {
-            att_password_box.Text = Hash_password.Hash_SHA1(att_password_box.Text);
-            att_password_box.Text = "hellafella";
+            
+            var = Hash_password.Hash_SHA1(att_password_box.Text);
+          
 
-            string username = att_username_box.Text;
-            string password = att_password_box.Text;
-            if ((att_username_box.Text == "MICHEAL ANGELO") && (att_password_box.Text == att_password_box.Text))
+            if ((att_username_box.Text == "MICHEAL ANGELO") && (att_password_box.Text == "hellafella"))
             {
+
+
                 attempt = 0;
                 MessageBox.Show("You have been given access");
                
@@ -43,7 +45,7 @@ namespace SHOPRITE_INVENTORY_SYSTEM
                     string cn = "datasource=127.0.0.1;port=3306;username=root;password= LIVERPOOL;";
 
                     //This is my insert query in which I am taking input from the user through windows forms
-                    string Query = "insert into shoprite_inventory.attendant_login(USERNAME, PASSWORD) values('" + this.att_username_box.Text + "','" + this.att_password_box.Text + "');";
+                    string Query = "insert into shoprite_inventory.attendant_login(USERNAME, PASSWORD) values('" + this.att_username_box.Text + "','" + var + "');";
 
                     //This is  MySqlConnection here i have created the object and pass my connection string.
                     MySqlConnection Con3 = new MySqlConnection(cn);
@@ -66,7 +68,7 @@ namespace SHOPRITE_INVENTORY_SYSTEM
             }
             else if ((attempt == 3)&&(attempt > 0))
             {
-                MessageBox.Show("You only have " + Convert.ToString(attempt) + "attempt to try");
+                MessageBox.Show("You only have " + Convert.ToString(attempt) + " attempt to try");
             }
             else
             {
@@ -80,6 +82,13 @@ namespace SHOPRITE_INVENTORY_SYSTEM
         {
             Home_page hp = new Home_page();
             hp.Show();
+            this.Hide();
+        }
+
+        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            Form2 f2 = new Form2();
+            f2.Show();
             this.Hide();
         }
     }

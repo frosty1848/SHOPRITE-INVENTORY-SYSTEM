@@ -32,8 +32,8 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.username_textbox = new System.Windows.Forms.TextBox();
+            this.passwd_textbox = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // label3
@@ -75,27 +75,27 @@
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // textBox1
+            // username_textbox
             // 
-            this.textBox1.Location = new System.Drawing.Point(175, 104);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(196, 20);
-            this.textBox1.TabIndex = 11;
+            this.username_textbox.Location = new System.Drawing.Point(175, 104);
+            this.username_textbox.Name = "username_textbox";
+            this.username_textbox.Size = new System.Drawing.Size(196, 20);
+            this.username_textbox.TabIndex = 11;
             // 
-            // textBox2
+            // passwd_textbox
             // 
-            this.textBox2.Location = new System.Drawing.Point(175, 150);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(196, 20);
-            this.textBox2.TabIndex = 12;
+            this.passwd_textbox.Location = new System.Drawing.Point(175, 150);
+            this.passwd_textbox.Name = "passwd_textbox";
+            this.passwd_textbox.Size = new System.Drawing.Size(196, 20);
+            this.passwd_textbox.TabIndex = 12;
             // 
             // signup
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(495, 255);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.passwd_textbox);
+            this.Controls.Add(this.username_textbox);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
@@ -112,7 +112,7 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox username_textbox;
+        private System.Windows.Forms.TextBox passwd_textbox;
     }
 }

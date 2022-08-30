@@ -36,7 +36,7 @@ namespace SHOPRITE_INVENTORY_SYSTEM
                 string cn = "datasource=127.0.0.1;port=3306;username=root;password= LIVERPOOL;";
 
                 //This is my insert query in which I am taking input from the user through windows forms
-                string Query = "insert into shoprite_inventory.a(CURRENCY, MODE, DATE, TIME) values('" + this.CurrencyBox.Text + "','" + this.ModeBox.Text + "','" + this.DateBox.Text + "','" + this.TimeBox.Text + "'); ";
+                string Query = "insert into shoprite_inventory.transaction(CURRENCY, MODE, DATE, TIME) values('" + this.CurrencyBox.Text + "','" + this.ModeBox.Text + "','" + this.DateBox.Text + "','" + this.TimeBox.Text + "'); ";
 
                 //This is  MySqlConnection here i have created the object and pass my connection string.
                 MySqlConnection MyConn2 = new MySqlConnection(cn);
@@ -57,24 +57,6 @@ namespace SHOPRITE_INVENTORY_SYSTEM
                 MessageBox.Show(ex.Message);
             }
 
-            try
-            {
-                con.cn.Open();
-                command = new MySqlCommand("Select * transaction", con.cn);
-                command.ExecuteNonQuery();
-                da = new MySqlDataAdapter(command);
-                dt = new DataTable();
-                da.Fill(dt);
-                dataGridView1.DataSource = dt;
-                con.cn.Close();
-                MessageBox.Show("Record inserted!");
-            }
-            catch (Exception ex)
-
-            {
-                MessageBox.Show(ex.Message);
-            }
-
         }
 
         private void resetbtn_Click(object sender, EventArgs e)
@@ -90,6 +72,27 @@ namespace SHOPRITE_INVENTORY_SYSTEM
             Attendant_page ap = new Attendant_page();
             ap.Show();
             this.Hide();
+        }
+
+        private void Ld_btn_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                con.cn.Open();
+                command = new MySqlCommand("Select * from transaction", con.cn);
+                command.ExecuteNonQuery();
+                da = new MySqlDataAdapter(command);
+                dt = new DataTable();
+                da.Fill(dt);
+                dataGridView1.DataSource = dt;
+                con.cn.Close();
+                MessageBox.Show("Record inserted!");
+            }
+            catch (Exception ex)
+
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
     }
 }

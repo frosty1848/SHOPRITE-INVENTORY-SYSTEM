@@ -14,6 +14,7 @@ namespace SHOPRITE_INVENTORY_SYSTEM
 {
     public partial class Admin_login : Form
     {
+        static string admin;
         static int attempt = 3;
         public Admin_login()
         {
@@ -23,12 +24,13 @@ namespace SHOPRITE_INVENTORY_SYSTEM
 
         private void button1_Click(object sender, EventArgs e)
         {
-            textBox2.Text = Hash_password.Hash_SHA1(textBox2.Text);
-            textBox2.Text = "10810164";
-
-            string username = textBox1.Text;
-            string password = textBox2.Text;
-            if ((textBox1.Text == "Ernest Kwabena Otu") && (textBox2.Text == textBox2.Text))
+            
+            admin = Hash_password.Hash_SHA1(textBox2.Text);
+           
+            
+      
+           
+            if ((textBox1.Text == "Ernest Kwabena Otu") && (textBox2.Text == "harleyrace"))
             {
 
                 ADMINISTRATOR_PAGE ap = new ADMINISTRATOR_PAGE();
@@ -42,7 +44,7 @@ namespace SHOPRITE_INVENTORY_SYSTEM
                     string cn = "datasource=127.0.0.1;port=3306;username=root;password= LIVERPOOL;";
 
                     //This is my insert query in which I am taking input from the user through windows forms
-                    string Query = "insert into shoprite_inventory.administrator_login(USERNAME, PASSWORD) values('" + this.textBox1.Text + "','" + this.textBox2.Text + "');";
+                    string Query = "insert into shoprite_inventory.administrator_login(USERNAME, PASSWORD) values('" + this.textBox1.Text + "','" + admin + "');";
 
                     //This is  MySqlConnection here i have created the object and pass my connection string.
                     MySqlConnection MyConn2 = new MySqlConnection(cn);

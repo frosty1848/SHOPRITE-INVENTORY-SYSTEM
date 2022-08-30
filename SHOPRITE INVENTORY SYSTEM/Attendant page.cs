@@ -72,5 +72,12 @@ namespace SHOPRITE_INVENTORY_SYSTEM
             sr.Show();
             this.Hide();
         }
+
+        private void button9_Click(object sender, EventArgs e)
+        {
+            stock_entry se = new stock_entry();
+            se.Show();
+            this.Hide();
+        }
     }
 }
