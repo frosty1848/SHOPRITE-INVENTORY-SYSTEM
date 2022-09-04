@@ -63,5 +63,29 @@ namespace SHOPRITE_INVENTORY_SYSTEM
         {
 
         }
+
+        private void checkBox1_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkBox1.Checked)
+            {
+                nw_password_box.UseSystemPasswordChar = false;
+            }
+            else
+            {
+                nw_password_box.UseSystemPasswordChar = true;
+            }
+        }
+
+        private void checkBox2_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkBox2.Checked)
+            {
+                reset_password_box.UseSystemPasswordChar = false;
+            }
+            else
+            {
+                reset_password_box.UseSystemPasswordChar = true;
+            }
+        }
     }
 }

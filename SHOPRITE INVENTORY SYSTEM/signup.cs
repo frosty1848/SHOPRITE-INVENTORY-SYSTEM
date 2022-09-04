@@ -54,5 +54,16 @@ namespace SHOPRITE_INVENTORY_SYSTEM
 
         }
 
+        private void checkBox1_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkBox1.Checked)
+            {
+                passwd_textbox.UseSystemPasswordChar = false;
+            }
+            else
+            {
+                passwd_textbox.UseSystemPasswordChar = true;
+            }
+        }
     }
 }

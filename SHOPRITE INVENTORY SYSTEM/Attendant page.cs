@@ -79,5 +79,10 @@ namespace SHOPRITE_INVENTORY_SYSTEM
             se.Show();
             this.Hide();
         }
+
+        private void Attendant_page_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

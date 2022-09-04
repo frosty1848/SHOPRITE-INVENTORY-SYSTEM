@@ -91,5 +91,17 @@ namespace SHOPRITE_INVENTORY_SYSTEM
             f2.Show();
             this.Hide();
         }
+
+        private void checkBox1_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkBox1.Checked)
+            {
+                att_password_box.UseSystemPasswordChar = false;
+            }
+            else
+            {
+                att_password_box.UseSystemPasswordChar = true;
+            }
+        }
     }
 }

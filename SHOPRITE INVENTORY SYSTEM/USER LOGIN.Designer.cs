@@ -39,12 +39,14 @@
             this.signup_link = new System.Windows.Forms.LinkLabel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.linkLabel1 = new System.Windows.Forms.LinkLabel();
+            this.checkBox1 = new System.Windows.Forms.CheckBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Algerian", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(138, 26);
             this.label1.Name = "label1";
@@ -55,6 +57,8 @@
             // label2
             // 
             this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.Transparent;
+            this.label2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.label2.Location = new System.Drawing.Point(45, 151);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(71, 13);
@@ -64,6 +68,8 @@
             // label3
             // 
             this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.Color.Transparent;
+            this.label3.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.label3.Location = new System.Drawing.Point(45, 201);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(73, 13);
@@ -87,6 +93,7 @@
             // user_btn
             // 
             this.user_btn.BackColor = System.Drawing.Color.Lime;
+            this.user_btn.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.user_btn.Location = new System.Drawing.Point(292, 283);
             this.user_btn.Name = "user_btn";
             this.user_btn.Size = new System.Drawing.Size(75, 32);
@@ -98,6 +105,7 @@
             // reset_link
             // 
             this.reset_link.AutoSize = true;
+            this.reset_link.BackColor = System.Drawing.Color.Transparent;
             this.reset_link.Location = new System.Drawing.Point(28, 288);
             this.reset_link.Name = "reset_link";
             this.reset_link.Size = new System.Drawing.Size(118, 13);
@@ -109,7 +117,8 @@
             // signup_link
             // 
             this.signup_link.AutoSize = true;
-            this.signup_link.Location = new System.Drawing.Point(28, 251);
+            this.signup_link.BackColor = System.Drawing.Color.Transparent;
+            this.signup_link.Location = new System.Drawing.Point(29, 265);
             this.signup_link.Name = "signup_link";
             this.signup_link.Size = new System.Drawing.Size(51, 13);
             this.signup_link.TabIndex = 7;
@@ -130,6 +139,7 @@
             // linkLabel1
             // 
             this.linkLabel1.AutoSize = true;
+            this.linkLabel1.BackColor = System.Drawing.Color.Transparent;
             this.linkLabel1.Location = new System.Drawing.Point(300, 251);
             this.linkLabel1.Name = "linkLabel1";
             this.linkLabel1.Size = new System.Drawing.Size(123, 13);
@@ -138,11 +148,27 @@
             this.linkLabel1.Text = "BACK TO ADMIN PAGE";
             this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked_1);
             // 
+            // checkBox1
+            // 
+            this.checkBox1.AutoSize = true;
+            this.checkBox1.BackColor = System.Drawing.Color.Transparent;
+            this.checkBox1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.checkBox1.Location = new System.Drawing.Point(48, 231);
+            this.checkBox1.Name = "checkBox1";
+            this.checkBox1.Size = new System.Drawing.Size(126, 17);
+            this.checkBox1.TabIndex = 10;
+            this.checkBox1.Text = "SHOW PASSWORD";
+            this.checkBox1.UseVisualStyleBackColor = false;
+            this.checkBox1.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
+            // 
             // USER_LOGIN
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(469, 327);
+            this.Controls.Add(this.checkBox1);
             this.Controls.Add(this.linkLabel1);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.signup_link);
@@ -173,5 +199,6 @@
         private System.Windows.Forms.LinkLabel signup_link;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.LinkLabel linkLabel1;
+        private System.Windows.Forms.CheckBox checkBox1;
     }
 }

@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TRANSACTION_RECORD));
             this.label1 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.label2 = new System.Windows.Forms.Label();
@@ -48,7 +49,9 @@
             // label1
             // 
             this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Algerian", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.label1.Location = new System.Drawing.Point(310, 29);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(176, 18);
@@ -66,7 +69,9 @@
             // label2
             // 
             this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Algerian", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.label2.Location = new System.Drawing.Point(34, 111);
             this.label2.Name = "label2";
             this.label2.RightToLeft = System.Windows.Forms.RightToLeft.No;
@@ -84,7 +89,10 @@
             // label3
             // 
             this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.Color.Transparent;
+            this.label3.Cursor = System.Windows.Forms.Cursors.No;
             this.label3.Font = new System.Drawing.Font("Algerian", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.SystemColors.Control;
             this.label3.Location = new System.Drawing.Point(34, 166);
             this.label3.Name = "label3";
             this.label3.RightToLeft = System.Windows.Forms.RightToLeft.No;
@@ -102,7 +110,9 @@
             // label4
             // 
             this.label4.AutoSize = true;
+            this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.Font = new System.Drawing.Font("Algerian", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.label4.Location = new System.Drawing.Point(34, 233);
             this.label4.Name = "label4";
             this.label4.RightToLeft = System.Windows.Forms.RightToLeft.No;
@@ -120,7 +130,9 @@
             // label5
             // 
             this.label5.AutoSize = true;
+            this.label5.BackColor = System.Drawing.Color.Transparent;
             this.label5.Font = new System.Drawing.Font("Algerian", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.label5.Location = new System.Drawing.Point(34, 289);
             this.label5.Name = "label5";
             this.label5.RightToLeft = System.Windows.Forms.RightToLeft.No;
@@ -137,7 +149,8 @@
             // 
             // transbtn
             // 
-            this.transbtn.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.transbtn.BackColor = System.Drawing.Color.DarkViolet;
+            this.transbtn.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.transbtn.Location = new System.Drawing.Point(22, 354);
             this.transbtn.Name = "transbtn";
             this.transbtn.Size = new System.Drawing.Size(75, 23);
@@ -149,6 +162,7 @@
             // resetbtn
             // 
             this.resetbtn.BackColor = System.Drawing.Color.Lime;
+            this.resetbtn.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.resetbtn.Location = new System.Drawing.Point(191, 354);
             this.resetbtn.Name = "resetbtn";
             this.resetbtn.Size = new System.Drawing.Size(75, 23);
@@ -160,6 +174,7 @@
             // linkLabel1
             // 
             this.linkLabel1.AutoSize = true;
+            this.linkLabel1.BackColor = System.Drawing.Color.Transparent;
             this.linkLabel1.Location = new System.Drawing.Point(34, 417);
             this.linkLabel1.Name = "linkLabel1";
             this.linkLabel1.Size = new System.Drawing.Size(142, 13);
@@ -171,6 +186,7 @@
             // Ld_btn
             // 
             this.Ld_btn.BackColor = System.Drawing.Color.Lime;
+            this.Ld_btn.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.Ld_btn.Location = new System.Drawing.Point(330, 102);
             this.Ld_btn.Name = "Ld_btn";
             this.Ld_btn.Size = new System.Drawing.Size(75, 29);
@@ -183,6 +199,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(800, 439);
             this.Controls.Add(this.Ld_btn);
             this.Controls.Add(this.linkLabel1);

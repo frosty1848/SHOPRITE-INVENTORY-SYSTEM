@@ -55,5 +55,31 @@ namespace SHOPRITE_INVENTORY_SYSTEM
             ap.Show();
             this.Hide();
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                string MyConnection = "datasource=127.0.0.1;port=3306;username=root;password=LIVERPOOL;";
+                string Qu = "delete from shoprite_inventory.sales_report where (STOCKS_IN_DEMAND ='" + this.textBox2.Text + "');";
+                MySqlConnection MyConn = new MySqlConnection(MyConnection);
+                MySqlCommand MyCommand = new MySqlCommand(Qu, MyConn);
+                MySqlDataReader MyReader;
+                MyConn.Open();
+                MyReader = MyCommand.ExecuteReader();
+                MessageBox.Show("Data Deleted");
+                while (MyReader.Read())
+                {
+                }
+                MyConn.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            textBox2.Text = "";
+            textBox3.Text = "";
+            textBox4.Text = "";
+        }
     }
 }

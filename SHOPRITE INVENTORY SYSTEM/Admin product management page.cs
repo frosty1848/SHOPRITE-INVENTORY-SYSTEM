@@ -153,6 +153,11 @@ namespace SHOPRITE_INVENTORY_SYSTEM
                 MessageBox.Show(ex.Message);
             }
         }
+
+        private void DATESOLD_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
 
