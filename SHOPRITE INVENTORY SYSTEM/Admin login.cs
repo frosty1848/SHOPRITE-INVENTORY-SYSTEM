@@ -107,6 +107,11 @@ namespace SHOPRITE_INVENTORY_SYSTEM
                 textBox2.UseSystemPasswordChar = true;
             }
         }
+
+        private void Admin_login_Load(object sender, EventArgs e)
+        {
+
+        }
     }
  }
 

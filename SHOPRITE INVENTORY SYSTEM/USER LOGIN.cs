@@ -48,7 +48,7 @@ namespace SHOPRITE_INVENTORY_SYSTEM
 
                     //This is command class which will handle the query and connection object.
                     MySqlCommand Com3 = new MySqlCommand(Query, Con3);
-                   
+                          
 
                     MySqlDataReader MyReader4;
                     Con3.Open();
