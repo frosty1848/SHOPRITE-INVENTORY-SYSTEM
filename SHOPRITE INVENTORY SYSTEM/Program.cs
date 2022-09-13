@@ -16,7 +16,7 @@ namespace SHOPRITE_INVENTORY_SYSTEM
         {  
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Home_page());
+            Application.Run(new start_up_form());
         }
     }
 }

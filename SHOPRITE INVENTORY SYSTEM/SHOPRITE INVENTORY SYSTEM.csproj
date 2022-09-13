@@ -140,6 +140,12 @@
     <Compile Include="signup.Designer.cs">
       <DependentUpon>signup.cs</DependentUpon>
     </Compile>
+    <Compile Include="start up form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="start up form.Designer.cs">
+      <DependentUpon>start up form.cs</DependentUpon>
+    </Compile>
     <Compile Include="start_close sales.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -226,6 +232,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="signup.resx">
       <DependentUpon>signup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="start up form.resx">
+      <DependentUpon>start up form.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="start_close sales.resx">
       <DependentUpon>start_close sales.cs</DependentUpon>

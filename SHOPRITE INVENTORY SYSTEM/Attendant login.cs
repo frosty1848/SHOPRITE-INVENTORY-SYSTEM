@@ -29,7 +29,7 @@ namespace SHOPRITE_INVENTORY_SYSTEM
           
 
             if ((att_username_box.Text == "MICHEAL ANGELO") && (att_password_box.Text == "hellafella"))
-            {
+            {               
 
 
                 attempt = 0;
@@ -47,7 +47,7 @@ namespace SHOPRITE_INVENTORY_SYSTEM
                     //This is my insert query in which I am taking input from the user through windows forms
                     string Query = "insert into shoprite_inventory.attendant_login(USERNAME, PASSWORD) values('" + this.att_username_box.Text + "','" + var + "');";
 
-                    //This is  MySqlConnection here i have created the object and pass my connection string.
+                    //This is  MySqlConnection here I have created the object and pass my connection string.
                     MySqlConnection Con3 = new MySqlConnection(cn);
 
                     //This is command class which will handle the query and connection object.
